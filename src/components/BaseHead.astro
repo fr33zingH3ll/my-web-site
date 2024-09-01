@@ -1,7 +1,7 @@
 ---
 // Import the global.css file here so that it is included on
 // all pages through the use of the <BaseHead /> component.
-import '../styles/global.css';
+import '../styles/styles.css';
 
 interface Props {
 	title: string;
@@ -26,6 +26,7 @@ const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
+<link rel="stylesheet" href="styles.css">
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
