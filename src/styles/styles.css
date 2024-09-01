@@ -53,33 +53,47 @@ main {
     gap: 10px;
 }
 
-.menu-item {
-    padding: 10px 15px;
+a.menu-anchor {
+    margin: 0.5em;
     text-align: center;
     cursor: pointer;
     transition: color 0.3s ease;
     color: #9a9a9a;
     position: relative;
-    z-index: 1; 
+    z-index: 1;
+    text-align: left;
+    width: 1ch;
 }
 
-.actif { color: black; }
+li.menu-item:hover {
+    color: black;
+}
 
-.menu-item:hover {
+a.menu-anchor {
+    text-decoration: none;
+}
+
+a.menu-anchor:focus {
     color: black;
 }
 
 .highlight {
-    position: relative;
-    width: 30px;
-    height: 30px;
+    position: absolute;
+    margin: 0.5em 0.25em;
+    width: 1em;
+    height: 1em;
     background-color: #e0e0e0;
-    border-radius: 50%;
+    border-radius: 100%;
     transition: transform 0.3s ease; /* Animation fluide */
-    z-index: 0;
     pointer-events: none;
 }
 
-.menu-item:hover ~ .highlight {
-    transform: translate(calc(50% + 15px));
+.menu a.menu-anchor:focus:nth-child(2) ~ span.highlight {
+    transform: translateX(2em);
+}
+.menu a.menu-anchor:focus:nth-child(3) ~ span.highlight {
+    transform: translateX(4em);
+}
+.menu a.menu-anchor:focus:nth-child(4) ~ span.highlight {
+    transform: translateX(6em);
 }
